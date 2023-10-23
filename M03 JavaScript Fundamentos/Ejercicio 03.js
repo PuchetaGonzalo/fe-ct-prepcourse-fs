@@ -7,7 +7,7 @@ function sonIguales(x, y) {
    // Tu código:
    if (x == y) { 
       return (true);
-   } else if (x != y) {
+   } else {
       return (false);
    }
 }
@@ -19,7 +19,7 @@ function tienenMismaLongitud(str1, str2) {
    // Tu código:
    if (str1.length == str2.length) {
       return (true);
-   } else if (str1.length != str2.length) {
+   } else {
       return (false);
    }
 }
@@ -30,7 +30,7 @@ function menosQueNoventa(num) {
    // Tu código:
    if (90 > num ) {
       return (true);
-   } else if (num >= 90) {
+   } else {
       return (false);
    }
 }
@@ -42,7 +42,7 @@ function mayorQueCincuenta(num) {
    // Tu código:
    if (num > 50 ) {
       return (true);
-   } else if (num <= 50) {
+   } else {
       return (false);
    }
 }
@@ -54,7 +54,7 @@ function esPar(num) {
    // Tu código:
    if (num % 2 === 0) {
       return (true);
-   } else if (num % 2 !== 0) {
+   } else {
       return (false);
    }
 }
@@ -65,7 +65,7 @@ function esImpar(num) {
    // Tu código:
    if (num % 2 !== 0) {
       return (true);
-   } else if (num % 2 == 0) {
+   } else {
       return (false);
    }
 }

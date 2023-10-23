@@ -9,8 +9,8 @@ function obtenerMayor(x, y) {
       return x ;
    } else if (x < y) {
       return y ;
-   } else if (x === y) { 
-      return x || y ;
+   } else  { 
+      return x ;
    }
 }
 
@@ -37,7 +37,7 @@ function conection(status) {
       return "Online";
    } else if (status === 2) {
       return "Away";
-   } else if (status !=1 || status !=2) {
+   } else {
       return "Offline"
    }
 }
@@ -55,7 +55,7 @@ function saludo(idioma) {
       return "Ni Hao!"
    } else if (idioma === "ingles") { 
       return "Hello!"
-   } else if (idioma != "aleman" || idioma != "mandarin" || idioma != "mandarin") {
+   } else {
       return "Hola!"
    }
 }
@@ -87,11 +87,7 @@ function esDiezOCinco(num) {
    // Retornar true si "num" es 10 o 5.
    // De lo contrario, retornar false.
    // Tu código:
-   if (num === 10 || num === 5) {
-      return true;
-   } else {
-      return false;
-   }
+   return num === 10 || num === 5
 }
 
 function estaEnRango(num) {

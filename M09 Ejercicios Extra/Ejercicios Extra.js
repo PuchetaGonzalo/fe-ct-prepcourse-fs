@@ -6,15 +6,48 @@ function deObjetoAarray(objeto) {
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
-}
 
-function numberOfCharacters(string) {
-   // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
-   // letras del string, y su valor es la cantidad de veces que se repite en el string.
-   // Las letras deben estar en orden alfabético.
-   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
-   // Tu código:
-}
+      const arregloDeArreglos = [];
+    
+      for (let clave in objeto) {
+        if (objeto.hasOwnProperty(clave)) {
+          arregloDeArreglos.push([clave, objeto[clave]]);
+        }
+      }
+    
+      return arregloDeArreglos;
+    }
+    
+
+
+
+    function numberOfCharacters(string) {
+      const resultado = {};
+    
+      // Recorremos el string caracter por caracter
+      for (let i = 0; i < string.length; i++) {
+        const letra = string[i];
+    
+        // Verificamos si la letra ya existe como propiedad en el objeto
+        if (resultado.hasOwnProperty(letra)) {
+          resultado[letra]++;
+        } else {
+          resultado[letra] = 1;
+        }
+      }
+    
+      // Ordenamos las letras en el objeto alfabéticamente
+      const letrasOrdenadas = Object.keys(resultado).sort();
+    
+      // Creamos un nuevo objeto ordenado
+      const objetoOrdenado = {};
+      for (let letra of letrasOrdenadas) {
+        objetoOrdenado[letra] = resultado[letra];
+      }
+    
+      return objetoOrdenado;
+    }
+    
 
 function capToFront(string) {
    // Recibes un string con algunas letras en mayúscula y otras en minúscula.
